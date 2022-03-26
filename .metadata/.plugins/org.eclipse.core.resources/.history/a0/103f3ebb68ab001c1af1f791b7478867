@@ -1,0 +1,3 @@
+module javajprogram {
+	requires java.sql;
+}

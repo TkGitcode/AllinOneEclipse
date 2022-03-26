@@ -1,0 +1,27 @@
+package com.practice;
+
+
+class Mainclass
+{
+	void print()
+	{
+		
+	}
+}
+class subClass extends Mainclass
+{
+	@Override
+	void print()
+	{
+		
+	}
+	
+}
+public class Practice {
+
+	public static void main(String[] args) {
+		subClass k=new subClass();
+
+	}
+
+}

@@ -1,0 +1,85 @@
+package com.loginservlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.mysql.cj.protocol.Resultset;
+
+/**
+ * Servlet implementation class myweb
+ */
+@WebServlet("/loginservlet")
+public class loginservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Default constructor.
+	 */
+	public loginservlet() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+
+		String useremail = request.getParameter("email");
+		String userpassword = request.getParameter("pass");
+
+		HttpSession session = request.getSession();
+		RequestDispatcher dispatcher = null;
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/promo", "root", "1234");
+			Connection connection = DbConnection.getConnection();
+			PreparedStatement PasVer = connection
+					.prepareStatement("select * from UserDetail where email = ? and password = ?");
+
+			PasVer.setString(1, useremail);
+			PasVer.setString(2, userpassword);
+
+			ResultSet rs = PasVer.executeQuery();
+			if (rs.next()) {
+				session.setAttribute("name", rs.getString("name"));
+				dispatcher = request.getRequestDispatcher("index.jsp");
+			}
+			else {
+				request.setAttribute("status", "failed");
+				dispatcher = request.getRequestDispatcher("login.jsp");
+			}
+
+			dispatcher.forward(request, response);
+		} catch (Exception e) {
+		
+			
+		}
+	}
+
+}

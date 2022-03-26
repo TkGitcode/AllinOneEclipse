@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.security.PublicKey"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.dbconnection.DataBaseconnection"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Statement"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.practice.Mainclass"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.practice.subClass"/>
+    <fullyQualifiedTypeName name="com.practice.iminterface"/>
+    <fullyQualifiedTypeName name="javax.swing.DefaultBoundedRangeModel"/>
+    <fullyQualifiedTypeName name="com.dbconnection.EmployeeInfo"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.lang.Iterable"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

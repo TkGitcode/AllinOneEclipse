@@ -1,0 +1,26 @@
+package com.practice;
+
+
+class Mainclass
+{
+	void print()
+	{
+		
+	}
+}
+class subClass extends Mainclass
+{
+	void print()
+	{
+		
+	}
+	
+}
+public class Practice {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

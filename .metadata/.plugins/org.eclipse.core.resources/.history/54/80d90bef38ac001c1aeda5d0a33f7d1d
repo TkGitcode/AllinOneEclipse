@@ -1,0 +1,69 @@
+package com.dbconnection;
+
+import java.util.*;
+import java.sql.*;
+
+public class Employee {
+
+	public static void main(String[] args) throws SQLException {
+		DataBaseconnection db = new DataBaseconnection();
+
+		Connection connection = db.getConnection(); // Getting a Connection Using Object of Class
+
+		/*
+		 * Creating a Statement(PreparedStatement) and Passing a SQL Query to a
+		 * Parameter
+		 */
+
+		// Inserting a value
+		PreparedStatement insert = connection.prepareStatement("insert into promo1(a,b) values(?,?)");
+
+		insert.setString(1, "First");
+		insert.setString(2, "Hello");
+		insert.executeUpdate();
+
+		// Deleting a value
+		PreparedStatement delete = connection.prepareStatement("delete from promo1 where b=(?)");
+		delete.setString(1, "Second");
+		delete.executeUpdate();
+
+		// Selecting a Value
+		PreparedStatement select = connection.prepareStatement("select * from promo1");
+		ResultSet rs = select.executeQuery(); // executeQuery() Will Return the value it Stores in ResultSet
+
+		while (rs.next()) {
+			System.out.println(rs.getString(1) + " " + rs.getString(2));
+
+		}
+		
+		LinkedList<EmployeeInfo> e=new LinkedList<>();
+		
+		EmployeeInfo employeeinfo=new EmployeeInfo();
+		
+		employeeinfo.setName("Tk");
+		employeeinfo.setEmpid(5);
+		employeeinfo.setDesgnation("learner");
+		e.add(employeeinfo);
+		
+		
+		employeeinfo.setName("Kumar");
+		employeeinfo.setEmpid(4);
+		employeeinfo.setDesgnation("Teacher");
+		e.add(employeeinfo);
+
+
+		
+		for(EmployeeInfo i:e)
+		{
+		System.out.print(i.getName()); 
+		System.out.print(i.getEmpid());
+		System.out.print(i.getDesgnation());
+		System.out.println();
+		}
+		
+		
+		
+		
+	}
+
+}

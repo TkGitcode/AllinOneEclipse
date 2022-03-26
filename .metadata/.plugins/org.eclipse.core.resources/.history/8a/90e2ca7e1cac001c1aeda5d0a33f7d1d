@@ -1,0 +1,45 @@
+package com.practice;
+
+
+interface iminterface
+{
+	  void print();
+}
+interface iminterface1
+{
+	default void screen()
+	{
+		System.out.println("I am from Interface");
+	}
+}
+class Mainclass implements iminterface,iminterface1 {
+	public void print() {
+		System.out.println("Hiii I am from Main Class");
+	}
+	default void screen()
+	{
+		System.out.println("I am from Interface");
+	}
+}
+
+class subClass extends Mainclass implements iminterface {
+
+	public void print() {
+		System.out.println("Hiii I am From Subclass");
+	}
+
+}
+
+public class Practice {
+
+	public static void main(String[] args) {
+		Mainclass k = new subClass();
+		
+		subClass k1 = new subClass();
+		
+		k1.screen();
+		k1.print();
+		k.print();
+	}
+
+}
