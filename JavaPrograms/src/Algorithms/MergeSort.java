@@ -1,4 +1,4 @@
-package sorting;
+package Algorithms;
 
 
 class MergeSortAlgorithm
