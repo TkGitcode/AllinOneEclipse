@@ -1,0 +1,18 @@
+package com.practice;
+
+class MergeSortAlgorithm
+{
+	
+}
+
+class MergeSort {
+
+	
+	public static void main(String[] args) {
+		 int a[]= {48,16,53,4,1,52,10};
+		 int mid= 0 + a.length/2;
+		 
+
+	}
+
+}
