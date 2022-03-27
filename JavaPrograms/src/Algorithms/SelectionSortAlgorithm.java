@@ -32,7 +32,7 @@ class SelectionSortAlgoritm {
 	}
 }
 
-public class SelectionSort {
+public class SelectionSortAlgorithm {
 
 	public static void main(String[] args) {
 		SelectionSortAlgoritm ssa = new SelectionSortAlgoritm();
