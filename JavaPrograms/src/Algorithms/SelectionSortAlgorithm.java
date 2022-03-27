@@ -9,7 +9,7 @@ class SelectionSortAlgoritm {
 		for (int i = 0; i < a.length; i++) {
 			minimum = a[i];// Defaultly setting minimum value
 			minIndex = i; //// Defaultly setting minimum value Index
-			for (int j = i; j < a.length; j++) {
+			for (int j = i+1; j < a.length; j++) {
 				if (a[j] < minimum) { // if any Array value is less than minimum then minimum value is updated
 					minimum = a[j]; // Updating a Minimum value and
 					minIndex = j; // Updating a Minimum value Index
