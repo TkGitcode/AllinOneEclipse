@@ -1,5 +1,0 @@
-module javajprogram {
-	requires java.sql;
-	requires mysql.connector.java;
-	
-}
