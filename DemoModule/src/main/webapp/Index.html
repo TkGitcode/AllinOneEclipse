@@ -6,12 +6,26 @@
 </head>
 <body>
 
-<!-- Action call the Servlet page which we mentioned inside the action ex:(Here i Give "add") -->
-<form action="add" >
-Enter a Number <input type="text" name="val1">
-Enter a Number <input type="text" name="val2"> 
-<input type="submit">
-</form>
-     Hello Login Page
+	<!-- Action call the Servlet page which we mentioned inside the action ex:(Here i Give "add") -->
+	<!-- This is a Form with method Post it Will Not shows a Query String in URL -->
+	
+	<form action="add" method="post">
+		<!-- Inside the Method "Post" is used to send a Data from Client to Database-->
+		<!-- Inside the Method "get" is used to send a Data from Database to Client-->
+		Enter a Number <input type="text" name="val1"> Enter a Number
+		<input type="text" name="val2"> <input type="submit">
+	</form>
+	
+	
+	<!-- This is a Form with method get it shows a Query String in URL -->
+	
+	<form action="add" method="get">
+		<!-- Inside the Method "Post" is used to send a Data from Client to Database-->
+		<!-- Inside the Method "get" is used to send a Data from Database to Client-->
+		Enter a Number <input type="text" name="val1"> Enter a Number
+		<input type="text" name="val2"> <input type="submit">
+	</form>
+	
+	Hello Login Page
 </body>
 </html>

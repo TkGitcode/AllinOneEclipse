@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Form</title>
+ <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="RegisterForm.css" />
+</head>
+<body>
+<!-- <form action=""> -->
+    <div class="container">
+      <div class="right-content"></div>
+
+      <div class="left-content">
+        <div class="wrapper-left">
+          <div class="heading">
+            <h3>Create account</h3>
+            <p>Get access to the write the exam by creating an account</p>
+          </div>
+
+          <div class="form-container">
+            <form id="form" action="registration" method="post">
+              <div class="form-control" id="input-name">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                  minlength="4"
+                  maxlength="14"
+                />
+                <small>Name length should be more than 4 letters</small>
+              </div>
+              <div class="form-control" id="input-email">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  name="email"
+                  id="email"
+                  pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                  required
+                />
+                <small>Email should not be empty</small>
+              </div>
+              <div class="form-control" id="input-password">
+                <label
+                  style="padding: 0px; position: relative; left: -10px"
+                  for="password"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  placeholder="Enter your Password"
+                  name="password"
+                  id="password"
+                  required
+                  minlength="6"
+                  maxlength="14"
+                />
+                <small>Name length should be more than 4 letters</small>
+              </div>
+
+              <div class="form-control" id="input-cpassword">
+                <label style="padding: 0px; margin-right: 10px" for="cpassword"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  name="password"
+                  id="cpassword"
+                  style="margin-right: 55px"
+                  minlength="6"
+                  maxlength="14"
+                  required
+                />
+                <small id="small"
+                  >Password Should match with password you've Entered
+                  before</small
+                >
+              </div>
+              
+                <button type="submit">Create my Account</button>
+       
+            </form>
+
+            <span class="line"> </span>
+            <div class="account">
+              <span class="acc-span"> Already have an account? </span>
+              <a href="index.html">Sign-in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of the left content -->
+    </div>
+    <script src="RegisterForm.js"></script>
+    <!-- </form> -->
+</body>
+</html>
