@@ -8,7 +8,8 @@ public class QuickSort {
     }
 	public static void main(String[] args) {
 		int[] a= {1,2,8,1,5,1,7};
-		quickSort(a);
+		//int 
+		//quickSort(a,);
 
 	}
 

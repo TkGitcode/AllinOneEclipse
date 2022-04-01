@@ -4,32 +4,34 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login Page</title>
-<link rel="stylesheet" href="validationfrom.css">
+<title>Login</title>
+<link rel="stylesheet" href="UserRegisterStyle.css">
 </head>
-
 <body>
 <div class="container">
         <div class="header">
             <h2>Login</h2>
         </div>
-        <form class="form" id="form">
+        <form class="form" id="form" action="loginPage" method="post">
             <div class="form-control">  
                 <label>Email</label>
-                <input type="text" placeholder="Enter a MailId" id="username">
+                <input type="email" placeholder="Enter a Mail id" id="email">
                 <i class="fa-solid fa-circle-check"></i>
                 <i class="fa-solid fa-exclamation-circle"></i>
                 <small>Error Message</small>
             </div>
             <div class="form-control">  
                 <label>Password</label>
-                <input type="text" placeholder="Enter a Mail Password" id="email">
+                <input placeholder="Enter a Password" id="Password" type="password">
                 <i class="fa-solid fa-circle-check"></i>
                 <i class="fa-solid fa-exclamation-circle"></i>
                 <small>Error Message</small>
             </div>
-            <button id="submit">Login</button>
+            <button id="submit">login</button>
         </form>
     </div>
+    	<div>
+		<a href="UserRegister.jsp" class="signup-image-link">I am New Member</a>
+	</div>
 </body>
 </html>

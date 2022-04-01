@@ -18,7 +18,7 @@ public class AddingProcess extends HttpServlet {//Here we Extends HttServlet Now
      //Here doPsot or doGet Method both depends on the Service Method
 	
 	//doPost Method
-	public void service(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException
 	{
 		int val1=Integer.valueOf(request.getParameter("val1"));
 		int val2=Integer.valueOf(request.getParameter("val2"));

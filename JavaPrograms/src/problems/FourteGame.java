@@ -4,7 +4,7 @@ package problems;
 public class FourteGame {
 
 	public static void main(String[] args) {
-		int output=10,first=1,second=2,third=3,fourth=4;
+		int output=25,first=9,second=8,third=4,fourth=5;
 		char expression[] = { '+', '-', '*', '/', '(', ')' };
 		String result = null;
 		int resultInt = 0;

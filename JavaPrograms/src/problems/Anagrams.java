@@ -27,7 +27,7 @@ public class Anagrams {
 
 	public static void main(String[] args) {
 		String n = "Sri";
-		String n1 = "rts";
+		String n1 = "ris";
 		System.out.println(isAnagram(n, n1));
 
 	}
