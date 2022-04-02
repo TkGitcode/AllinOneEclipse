@@ -22,14 +22,14 @@
 			</div>
 			<div class="form-control">
 				<label>Email</label> <input type="text"
-					placeholder="Enter a Mail id" id="email"> <i
+					placeholder="Enter a Mail id" id="email" name="mail"> <i
 					class="fa-solid fa-circle-check"></i> <i
 					class="fa-solid fa-exclamation-circle"></i> <small>Error
 					Message</small>
 			</div>
 			<div class="form-control">
 				<label>Password</label> <input type="password"
-					placeholder="Enter a Password" id="Password"> <i
+					placeholder="Enter a Password" id="Password" name="pass"> <i
 					class="fa-solid fa-circle-check"></i> <i
 					class="fa-solid fa-exclamation-circle"></i> <small>Error
 					Message</small>
@@ -48,5 +48,13 @@
 		<a href="UserLogin.jsp" class="signup-image-link">I am already
 			member</a>
 	</div>
+	<script type="text/javascript">
+	let pass=document.getElementById('Password');
+	let cnfpass=document.getElementById('cnfPassword');
+
+	if(pass !== cnfpass)
+	{
+		alert("pass Not Match")
+	}</script>
 </body>
 </html>

@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #353836;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 5px 20px;
+  background-color: #1d1f1d;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#brand a {
+  color: rgb(230, 167, 231);
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: white;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 20px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#login,
+#signup {
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+#login {
+  border: 1px solid #e989eb;
+}
+
+#signup {
+  border: 1px solid rgb(132, 233, 132);
+}
+
+#signup a {
+  color: rgb(55, 226, 55);
+}
+
+#login a {
+  color: #ebaeec;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+#home,
+#about,
+#exam {
+  height: 590px;
+  padding: 20px;
+}
+/* home style starts */
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+#home h2 {
+  width: 1000px;
+  font-size: 40px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  #home h2 {
+    font-size: 25px;
+    width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 60px;
+}
+
+#about h3 {
+  font-size: 30px;
+  padding: 10px;
+  letter-spacing: 2px;
+  line-height: 35px;
+  width: 1000px;
+}
+
+#about .ul {
+  display: block;
+  padding: 40px;
+}
+#about .li {
+  padding-top: 15px;
+}
+/* home style ends */
+
+/* Radiio button style */
+#exam {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-check {
+  padding: 13px;
+}
+
+/* sss */
+#take-test {
+  background-image: linear-gradient(-180deg, #631964, #631964);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  height: 38px;
+  line-height: 34px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 150px;
+  font-weight: 500;
+  z-index: 9;
+  border: 0;
+  text-align: center;
+}
+
+#take-test:hover {
+  background: #00bd68;
+}
+/* dss */
+
+/*  */
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
