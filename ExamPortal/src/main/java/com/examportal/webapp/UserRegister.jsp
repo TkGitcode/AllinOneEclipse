@@ -51,10 +51,15 @@
 	<script type="text/javascript">
 	let pass=document.getElementById('Password');
 	let cnfpass=document.getElementById('cnfPassword');
-
-	if(pass !== cnfpass)
-	{
-		alert("pass Not Match")
-	}</script>
+    let btn=document.getElementById('submit');
+    btn.addEventListener('click', ev =>
+    {
+    	if(pass.value !== cnfpass.value)
+    	{
+    		alert("pass Not Match")
+    		location.href="UserRegister.jsp"
+    	}
+    })
+	</script>
 </body>
 </html>
