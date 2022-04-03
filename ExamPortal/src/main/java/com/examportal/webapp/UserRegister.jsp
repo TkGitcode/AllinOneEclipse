@@ -12,10 +12,11 @@
 		<div class="header">
 			<h2>Create Account</h2>
 		</div>
-		<form class="form" id="form" action="registerPage" method="post">
+		<form class="form" id="form" action="registerPage" method="post"
+			onsubmit="return validate()" name="registerForm">
 			<div class="form-control">
-				<label>UserName</label> <input type="text"
-					placeholder="Enter a Name" id="username" name="name"> <i
+				<label>Name</label> <input type="text" placeholder="Enter a Name"
+					id="username" name="name"> <i
 					class="fa-solid fa-circle-check"></i> <i
 					class="fa-solid fa-exclamation-circle"></i> <small>Error
 					Message</small>
@@ -41,25 +42,38 @@
 					class="fa-solid fa-exclamation-circle"></i> <small>Error
 					Message</small>
 			</div>
-			<button id="submit">Submit</button>
+			<div class="form-control">
+				<label>Phone Number</label> <input type="text"
+					placeholder="Enter a Contact Number" id="phonenumber"> <i
+					class="fa-solid fa-circle-check"></i> <i
+					class="fa-solid fa-exclamation-circle"></i> <small>Error
+					Message</small>
+			</div>
+			<button id="submit">SignIn</button>
 		</form>
 	</div>
-	<div>
-		<a href="UserLogin.jsp" class="signup-image-link">I am already
-			member</a>
+	<div class="dont-acc">
+		<span class="dont-span"> Already have an account?</span> <a
+			href="UserLogin.jsp" class="signup-image-link"> Log-in</a>
 	</div>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script type="text/javascript">
-	let pass=document.getElementById('Password');
-	let cnfpass=document.getElementById('cnfPassword');
-    let btn=document.getElementById('submit');
-    btn.addEventListener('click', ev =>
-    {
-    	if(pass.value !== cnfpass.value)
-    	{
-    		alert("pass Not Match")
-    		location.href="UserRegister.jsp"
-    	}
-    })
+		let name = document.getElementById('username');
+		let email=document.getElementById('email');
+		let pass = document.getElementById('Password');
+		let cnfpass = document.getElementById('cnfPassword');
+		function validate() {
+			if (pass.value !== cnfpass.value) {
+				swal("PassWord is MisMatch");
+				return false;
+			}
+			if (name.value == '' || email.value == '') {
+				swal("Enter all Field");
+				return false;
+			}
+			else
+				return true;
+		}
 	</script>
 </body>
 </html>

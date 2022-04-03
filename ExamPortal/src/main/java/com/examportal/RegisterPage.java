@@ -46,13 +46,9 @@ public class RegisterPage extends HttpServlet {
 				requestDispatcher = request.getRequestDispatcher("UserLogin.jsp");
 				pw.print("Account Created ");
 			}
-			else {
-				requestDispatcher=request.getRequestDispatcher("UserRegister.jsp");
-				pw.print("Error in Creation");
-			}
 			requestDispatcher.forward(request, response);
 		} catch (Exception e) {
-			pw.print("Error during Creation");
+			pw.print("Error in Registration Page");
 		}
 	}
 

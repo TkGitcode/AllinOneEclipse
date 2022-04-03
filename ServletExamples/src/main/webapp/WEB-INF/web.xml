@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>ServletExamples</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>firstpage</servlet-name>
+		<servlet-class>com.sevletexample.FirstPage</servlet-class>
+		<!-- Servlet Config -->
+		<init-param>
+			<param-name>Myname</param-name>
+			<param-value>Thirumalai Kumar</param-value>
+		</init-param>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>firstpage</servlet-name>
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+
+	<!-- Servlet Context -->
+
+	<context-param>
+		<param-name>Myname</param-name>
+		<param-value>ThirumalaiKumar</param-value>
+	</context-param>
+</web-app>
