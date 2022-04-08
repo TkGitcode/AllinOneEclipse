@@ -30,9 +30,11 @@ public class RegisterPage extends HttpServlet {
 		String usrMail=request.getParameter("mail");
 		String usrPasswrd=request.getParameter("pass");		
 		
-		
 		try {
 			connection= DbConnection.getConnection();
+			
+			
+			
 			PreparedStatement signUpPreparedStatement=connection.prepareStatement("insert into userdetail(name,email,password) values(?,?,?)");
 			
 			signUpPreparedStatement.setString(1, usrName);

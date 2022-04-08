@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -33,13 +34,17 @@ public class LoginPage extends HttpServlet {
 			PreparedStatement loginpreparedStatement=connection.prepareStatement("select * from UserDetail where email=? and password=?");
 			
 			loginpreparedStatement.setString(1,mailId);
-			loginpreparedStatement.setString(2, passWord);
+			loginpreparedStatement.setString(2, passWord );
 			
 			ResultSet rsResultset=loginpreparedStatement.executeQuery();
 			
 			if(rsResultset.next())
 			{
 				pw.print("Logined Successfully ");
+				
+				HttpSession session=request.getSession();
+				session.setAttribute("mailId", mailId);
+				//response.sendRedirect("DetailPage.jsp");
 				rsDispatcher= request.getRequestDispatcher("DetailPage.jsp");
 			}
 			else {

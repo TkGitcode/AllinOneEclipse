@@ -12,7 +12,7 @@
 		<div style="padding: 10px 20px" class="header">
 			<h2>Create Account</h2>
 		</div>
-		<form class="form" id="form" action="registerPage" method="post">
+		<form class="form" id="form" action="registerPage" method="post" onsubmit="return validate()">
 			<div class="first">
 				<div class="form-control">
 					<label>Name</label> <input type="text"

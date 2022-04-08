@@ -7,7 +7,7 @@ public class DbConnection {
 	
 	
 	
-	static Connection getConnection()
+	public static Connection getConnection()
 	{
 		Connection connection=null;
 		try {

@@ -21,24 +21,22 @@ public class day1_Encode {
 	public static void main(String[] args) {
 		String in = "1100111";
 		String result = "";
-		int prev = 0,count=0;
+		int prev = 0, count = 0;
 		for (int i = 0; i < in.length(); i++) {
 			if (in.charAt(i) == '0') {
-				//System.out.println(prev + " " + i);
+				 System.out.println(prev + " " + i);
 				String val = check(i - prev);
 				result += val;
 				prev = i + 1;
-				count=0;
-			}
-			else {
+				count = 0;
+			} else {
 				count++;
-				if(count>=4)
-				{
+				if (count >= 4) {
 					String val = check(count);
-					result+=val;
-					prev = i+1;
-					count=0;
-					
+					result += val;
+					prev = i + 1;
+					count = 0;
+
 				}
 			}
 
