@@ -20,7 +20,7 @@ public class UserLogout extends HttpServlet {
 		
 		HttpSession session=request.getSession();
 		session.removeAttribute("mailId");
-		session.invalidate();//To all value of Session is In valid
+		session.invalidate();//To all value of Session is In valid 
 		response.sendRedirect("UserLogin.jsp");
 	}
 

@@ -11,6 +11,10 @@
 
 <% 
 
+response.setHeader("Cache-Control", "no-cache, no-store,must-revalidate"); //HTTP 1.1
+response.setHeader("Pragma", "no-cache"); //HTTP 1.0
+response.setHeader("Expires", "0"); //Proxies
+
 if(session.getAttribute("mailId") == null)
 {
 	//System.out.println("Hello");
@@ -59,9 +63,9 @@ if(session.getAttribute("mailId") == null)
     </div>
     <div id="exam">
       <h2>Take Exam here</h2>
-      <form action="registerPage">
+      <form action="detailservletpage" method="post">
         <div class="form-check">
-          <input type="radio" class="form-check-input" id="male" name="exam" />
+          <input type="radio" class="form-check-input" id="male" name="exam" value="java"/>
           <label class="form-check-label" for="male">Java</label>
         </div>
         <div class="form-check">
@@ -70,11 +74,12 @@ if(session.getAttribute("mailId") == null)
             class="form-check-input"
             id="female"
             name="exam"
+       value="js"
           />
           <label class="form-check-label" for="female">JavaScript</label>
         </div>
         <div class="form-check">
-          <input type="radio" class="form-check-input" id="sql" name="exam" />
+          <input type="radio" class="form-check-input" id="sql" name="exam" value="sql"/>
           <label class="form-check-label" for="sql">SQL</label>
         </div>
         <div class="form-check">

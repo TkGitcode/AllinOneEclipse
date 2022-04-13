@@ -17,7 +17,7 @@ public class AddingProcess extends HttpServlet {//Here we Extends HttServlet Now
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-     //Here doPsot or doGet Method both depends on the Service Method
+     //Here doPost or doGet Method both depends on the Service Method
 	
 	//doPost Method
 	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException

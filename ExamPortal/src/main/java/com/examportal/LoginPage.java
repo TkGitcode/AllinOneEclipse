@@ -26,6 +26,7 @@ public class LoginPage extends HttpServlet {
 		Connection connection=null;
 		PrintWriter pw=response.getWriter();
 		
+		String uName="";
 		RequestDispatcher rsDispatcher=null;
 		try {
 			String mailId=request.getParameter("mail");
