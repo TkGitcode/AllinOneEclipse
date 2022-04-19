@@ -69,6 +69,7 @@ public class ApplicationFormServlet extends HttpServlet {
 			objectMapper.writeValue(
 					new File("C:/Users/Sathish Kumar/eclipse-workspace_Server/ApplicationForm/json/HiringDetail.json"),
 					apd);
+			
 			InputStream inputStream = new FileInputStream(
 					new File("C:/Users/Sathish Kumar/eclipse-workspace_Server/ApplicationForm/json/HiringDetail.json"));
 			TypeReference<List<ApplicationDao>> details = new TypeReference<List<ApplicationDao>>() {
@@ -76,6 +77,7 @@ public class ApplicationFormServlet extends HttpServlet {
 			List<ApplicationDao> Listdetails = objectMapper.readValue(inputStream, details);
 
 			String jasonString = objectMapper.writeValueAsString(apd);
+			
 
 			try (FileWriter file = new FileWriter("AppledDetails.json")) {
 				file.write(jasonString);
