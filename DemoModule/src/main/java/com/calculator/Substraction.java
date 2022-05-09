@@ -46,9 +46,7 @@ public class Substraction extends HttpServlet{
 		  }
 	  
 	  }
-	
-	  writer.println("I am Called By Cookies "+n);
-	   
+	  writer.println("I am Called By Cookies "+n);  
    }
 	   
    }

@@ -1,6 +1,5 @@
 package practice;
 
-import java.util.List;
 import java.util.Vector;
 
 class Solution {
@@ -23,7 +22,7 @@ class Solution {
     }
 }
 
-public class Collections {
+public class Collectionss {
 
 	public static void main(String[] args) {
 		
@@ -38,5 +37,7 @@ public class Collections {
 		System.out.println(vec.capacity());
 
 	}
+
+	
 
 }
