@@ -1,7 +1,17 @@
 package practice;
 
 
-
+interface ifc
+{
+   default void print()
+   {
+	   System.out.println("I am from default Interface");
+   }
+   static void imStatic()
+   {
+	   System.out.println("\"\"\"/-");
+   }
+}
 abstract class ab 
 {
 	abstract protected void print();
@@ -22,11 +32,11 @@ class Main
 		System.out.println("Main Static");
 	}
 }
-class SubClass extends Main
+class SubClass extends ab implements ifc
 {
-	protected void print()
+	public void print()
 	{
-		System.out.println("SubClass");
+		System.out.println("I am From SubClass");
 	}
     static void call()
 	{
@@ -40,7 +50,8 @@ public class Test1 {
 	public static void main(String[] args) {
 	SubClass k=new SubClass();
 	k.print();
-	k.call();
+	ifc.imStatic();
+	//k.call();
 
 	}
 

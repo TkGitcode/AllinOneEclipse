@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="request"/>
 			<item value="List"/>
 			<item value="loginpreparedStatement"/>
 			<item value="customerdetails_tbl"/>

@@ -18,27 +18,10 @@
 			request.open("POST", url, false);
 			request.send();
 			var val = JSON.parse(request.responseText);
-			document.getElementById('result').innerHTML = val;
+			document.getElementById('result').innerHTML = val.value;
 		} catch (e) {
 			alert("Unable to Process" + e)
 		}
-		 try
-		{
-			 console.log("Hii");
-			request.open("GET","https://learnwebcode.github.io/json-example/animals-1.json",true);
-			console.log("Hello");
-			request.onload = function()
-			{
-				const obj = JSON.parse(this.responseText);
-				//var jsonValue=JSON.parse(request.responseText);
-				console.log(obj);
-			};
-			request.send();
-		}
-		catch(e)
-		{
-			alert("GET is not loaded")
-		} 
 	}
 </script>
 <body>
