@@ -1,0 +1,24 @@
+{
+	"StudentDetails": [
+		{
+			"StudentGender": "male",
+			"address": [
+				"10th",
+				"tenkasi",
+				6275855
+			],
+			"StudentName": "kumar",
+			"StudentIdNo": 2
+		},
+		{
+			"StudentGender": "male",
+			"address": [
+				"12th",
+				"tirunelveli",
+				9632563
+			],
+			"StudentName": "suleman",
+			"StudentIdNo": 3
+		}
+	]
+}

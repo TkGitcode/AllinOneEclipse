@@ -11,8 +11,8 @@ public class UserView {
 			int choice = 0;
 			while (choice != 9) {
 				System.out.println("Enter Your Choice ");
-				System.out.println(
-						"1.Add Employee List \n" + "2.Display All Employee List \n" + "3.Search a Employee ");
+				System.out
+						.println("1.Add Employee List \n" + "2.Display All Employee List \n" + "3.Search a Employee ");
 				choice = scanner.nextInt();
 				switch (choice) {
 				case 1: {
@@ -27,6 +27,9 @@ public class UserView {
 					userDetails.searchBy();
 					break;
 				}
+				case 4:
+					//userDetails.removeDuplicate();
+					//break;
 				}
 			}
 			scanner.close();

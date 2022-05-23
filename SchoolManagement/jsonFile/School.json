@@ -1,0 +1,25 @@
+{
+ "firstName": "John",
+ "lastName": "Kennedy",
+ "address": [
+  {
+   "street": "abc",
+   "city": "Hyderabad",
+   "state": "TL",
+   "phoneNo":
+   { "personal":"6528254245","Home":"3212-52542"
+  }
+  },
+  {
+   "street": "xyz",
+   "city": "Chennai",
+   "state": "TN",
+   "phoneNo":
+   { "personal":"7458254245","Home":"4412-52542"
+  }
+  }
+ ],
+  "SocialMedia":
+   { "Facebook":"john/facebook","Twitter":"@john_off"
+  }
+}

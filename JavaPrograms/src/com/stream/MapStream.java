@@ -88,6 +88,8 @@ public class MapStream {
 		upperCase = lowerUpper.stream().flatMap(k -> k.stream().filter(str -> str.equals("kumar"))).toList();
 
 		System.out.println(upperCase);
+		
+		
 	}
 
 }
